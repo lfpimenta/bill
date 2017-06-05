@@ -58,6 +58,12 @@ After creating database we need to restore database structure usefull for the pr
 $ mysql -u root talkdesk < assets/DB/initial-mysql.sql
 ```
 
+In order to billing is possible we should have at least one account with credit, for that we can insert in db account like this:
+
+```bash
+insert into account (name, credit) values ('Luis', 300);
+```
+
 ### Configuration
 
 There is a file named *config.ini* that has the settings to:
