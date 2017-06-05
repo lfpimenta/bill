@@ -98,9 +98,9 @@ The implemented commands are:
 * **chargeCall** - Charges a call and remove credits from a given account
 * **listInboundCalls** - Lists the charges for the given account
 
-####Examples
+#### Examples
 
-#####Add an inbound call
+##### Add an inbound call
  * lasts for **100** seconds,
  * for **Luis** account,
  * with talkdesknumber **12345545678**,
@@ -111,7 +111,7 @@ The implemented commands are:
 php call_billing.php chargeCall 100 "Luis" 12345545678 22422444446 180022344
 ```
 
-#####List charges for user "Luis"
+##### List charges for user "Luis"
 ```bash
 php call_billing.php listCalls "KLuis"
 ```
