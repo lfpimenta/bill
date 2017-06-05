@@ -47,13 +47,11 @@ DROP TABLE IF EXISTS `account_call_month`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `account_call_month` (
-  `id_account_call_month` int(11) NOT NULL,
   `fk_account` int(11) NOT NULL,
   `month` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `duration` float DEFAULT '0',
   `discount` float DEFAULT '0',
-  PRIMARY KEY (`id_account_call_month`),
   UNIQUE KEY `idx_unique` (`fk_account`,`year`,`month`),
   KEY `fk_acm_account_idx` (`fk_account`),
   CONSTRAINT `fk_acm_account` FOREIGN KEY (`fk_account`) REFERENCES `account` (`id_account`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -83,9 +81,9 @@ CREATE TABLE `call` (
   `cost` float NOT NULL DEFAULT 0,
   `balance` float NOT NULL,
   `fk_account` int(11) NOT NULL,
-  `talkdesk_phone_number` int(11) NOT NULL,
-  `customer_phone_number` int(11) NOT NULL,
-  `forwarded_phone_number` int(11) DEFAULT NULL,
+  `talkdesk_phone_number` varchar(45) NOT NULL,
+  `customer_phone_number` varchar(45) NOT NULL,
+  `forwarded_phone_number` varchar(45) DEFAULT NULL,
   `call_type` enum('inbound','outboud') NOT NULL,
   PRIMARY KEY (`id_call`),
   KEY `fk_call_account_idx` (`fk_account`),
