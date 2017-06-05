@@ -1,8 +1,8 @@
-# Talkdesk Challenge
+# Challenge
 
 I accepted the challenge [call billing](problems/b3_call_billing.md).
 
-The objective was create a console application to charge incoming calls, and list all charges per account.
+The objective is to create a console application to charge incoming calls, and list all charges per account.
 
 ## Technologies used
 
